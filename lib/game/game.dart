@@ -6,7 +6,6 @@ class BrickBreakerGame extends Forge2DGame<BrickBreakerWorld> {
   BrickBreakerGame()
       : super(
           world: BrickBreakerWorld(),
-          gravity: Vector2.zero(),
           cameraComponent: CameraComponent.withFixedResolution(
             width: 180 * lengthFactor,
             height: 320 * lengthFactor,

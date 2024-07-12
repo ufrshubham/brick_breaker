@@ -6,7 +6,7 @@ class BrickBreakerGame extends Forge2DGame<BrickBreakerWorld> {
   BrickBreakerGame()
       : super(
           world: BrickBreakerWorld(),
-          cameraComponent: CameraComponent.withFixedResolution(
+          camera: CameraComponent.withFixedResolution(
             width: 180 * lengthFactor,
             height: 320 * lengthFactor,
           ),
@@ -18,5 +18,6 @@ class BrickBreakerGame extends Forge2DGame<BrickBreakerWorld> {
   @override
   void onLoad() {
     camera.viewfinder.zoom = 1.0;
+    camera.moveTo(camera.viewport.virtualSize * 0.5);
   }
 }

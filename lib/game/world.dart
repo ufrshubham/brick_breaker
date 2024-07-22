@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:brick_breaker/game/actors/ball.dart';
 import 'package:brick_breaker/game/actors/walls.dart';
 import 'package:brick_breaker/game/game.dart';
 import 'package:flame/components.dart';
@@ -15,6 +16,13 @@ class BrickBreakerWorld extends Forge2DWorld
       Walls(
         game.camera.viewport.virtualSize,
         5 * BrickBreakerGame.lengthFactor,
+      ),
+    );
+
+    await add(
+      Ball(
+        radius: 4 * BrickBreakerGame.lengthFactor,
+        position: game.camera.viewport.virtualSize * 0.5,
       ),
     );
   }

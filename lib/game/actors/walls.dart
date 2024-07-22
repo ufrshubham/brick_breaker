@@ -43,7 +43,7 @@ class Walls extends BodyComponent {
                   Vector2(gameSize.x * 0.5, gameSize.y - wallThickness * 0.5),
                   0,
                 ),
-              isSensor: true,
+              // isSensor: true,
             ),
           ],
         );

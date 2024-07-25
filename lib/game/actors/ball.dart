@@ -15,6 +15,7 @@ class Ball extends BodyComponent {
             FixtureDef(
               CircleShape()..radius = radius,
               restitution: 1,
+              friction: 0.25,
             ),
           ],
         );
@@ -24,7 +25,7 @@ class Ball extends BodyComponent {
   @override
   Future<void> onLoad() async {
     await super.onLoad();
-    body.applyLinearImpulse(Vector2.random());
+    body.applyLinearImpulse(Vector2(0, 1));
   }
 
   @override

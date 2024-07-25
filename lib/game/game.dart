@@ -1,8 +1,10 @@
 import 'package:brick_breaker/game/world.dart';
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame_forge2d/flame_forge2d.dart';
 
-class BrickBreakerGame extends Forge2DGame<BrickBreakerWorld> {
+class BrickBreakerGame extends Forge2DGame<BrickBreakerWorld>
+    with HasKeyboardHandlerComponents {
   BrickBreakerGame()
       : super(
           world: BrickBreakerWorld(),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:brick_breaker/game/actors/ball.dart';
+import 'package:brick_breaker/game/actors/paddle.dart';
 import 'package:brick_breaker/game/actors/walls.dart';
 import 'package:brick_breaker/game/game.dart';
 import 'package:flame/components.dart';
@@ -23,6 +24,16 @@ class BrickBreakerWorld extends Forge2DWorld
       Ball(
         radius: 4 * BrickBreakerGame.lengthFactor,
         position: game.camera.viewport.virtualSize * 0.5,
+      ),
+    );
+
+    await add(
+      Paddle(
+        size: Vector2(30, 6)..scale(BrickBreakerGame.lengthFactor),
+        position: Vector2(
+          0.5 * game.camera.viewport.virtualSize.x,
+          0.9 * game.camera.viewport.virtualSize.y,
+        ),
       ),
     );
   }

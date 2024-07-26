@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:brick_breaker/game/actors/ball.dart';
+import 'package:brick_breaker/game/actors/brick_zone.dart';
 import 'package:brick_breaker/game/actors/paddle.dart';
 import 'package:brick_breaker/game/actors/walls.dart';
 import 'package:brick_breaker/game/game.dart';
@@ -34,6 +35,23 @@ class BrickBreakerWorld extends Forge2DWorld
           0.5 * game.camera.viewport.virtualSize.x,
           0.9 * game.camera.viewport.virtualSize.y,
         ),
+      ),
+    );
+
+    await add(
+      BrickZone(
+        size: Vector2(
+          game.camera.viewport.virtualSize.x * 0.8,
+          game.camera.viewport.virtualSize.y * 0.35,
+        ),
+        position: Vector2(
+          game.camera.viewport.virtualSize.x * 0.1,
+          game.camera.viewport.virtualSize.y * 0.1,
+        ),
+        numBricksX: 6,
+        numBricksY: 9,
+        spacingX: 5 * BrickBreakerGame.lengthFactor,
+        spacingY: 5 * BrickBreakerGame.lengthFactor,
       ),
     );
   }

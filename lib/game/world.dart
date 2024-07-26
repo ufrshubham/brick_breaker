@@ -14,6 +14,15 @@ class BrickBreakerWorld extends Forge2DWorld
 
   @override
   Future<void> onLoad() async {
+    await _start();
+  }
+
+  void reset() {
+    removeAll(children);
+    Future.delayed(const Duration(seconds: 1), () => _start());
+  }
+
+  Future<void> _start() async {
     await add(
       Walls(
         game.camera.viewport.virtualSize,

@@ -1,6 +1,11 @@
+import 'package:brick_breaker/game/actors/brick.dart';
+import 'package:brick_breaker/game/actors/walls.dart';
+import 'package:brick_breaker/game/world.dart';
+import 'package:flame/components.dart';
 import 'package:flame_forge2d/flame_forge2d.dart';
 
-class Ball extends BodyComponent {
+class Ball extends BodyComponent
+    with ContactCallbacks, ParentIsA<BrickBreakerWorld> {
   Ball({
     double radius = 0,
     Vector2? position,
@@ -18,7 +23,9 @@ class Ball extends BodyComponent {
               friction: 0.25,
             ),
           ],
-        );
+        ) {
+    bodyDef?.userData = this;
+  }
 
   final _targetSpeed = 20.0;
 
@@ -35,6 +42,16 @@ class Ball extends BodyComponent {
       final direction = body.linearVelocity.normalized();
       // Impulse = change in momentum and momentum is mass * velocity.
       body.applyLinearImpulse(direction * deltaSpeed * body.mass);
+    }
+  }
+
+  @override
+  void beginContact(Object other, Contact contact) {
+    if (other is Brick) {
+      other.removeFromParent();
+    } else if (other is Walls &&
+        (contact.fixtureA.isSensor || contact.fixtureB.isSensor)) {
+      parent.reset();
     }
   }
 }

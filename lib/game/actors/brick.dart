@@ -12,5 +12,7 @@ class Brick extends BodyComponent {
               restitution: 1,
             ),
           ],
-        );
+        ) {
+    bodyDef?.userData = this;
+  }
 }

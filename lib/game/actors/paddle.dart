@@ -3,39 +3,37 @@ import 'package:flame_forge2d/flame_forge2d.dart';
 import 'package:flutter/services.dart';
 
 class Paddle extends BodyComponent with KeyboardHandler {
-  Paddle({
-    required this.size,
-    Vector2? position,
-  }) : super(
-          bodyDef: BodyDef(
-            type: BodyType.kinematic,
-            position: position,
-            allowSleep: false,
+  Paddle({required this.size, Vector2? position})
+    : super(
+        bodyDef: BodyDef(
+          type: BodyType.kinematic,
+          position: position,
+          allowSleep: false,
+        ),
+        fixtureDefs: [
+          FixtureDef(
+            // The effective width of the rectangular portion is given by (size.x - size.y)
+            // where size.y is (2 * radius) of the end circles.
+            PolygonShape()..setAsBoxXY((size.x - size.y) * 0.5, size.y * 0.5),
+            restitution: 1,
+            friction: 0.25,
           ),
-          fixtureDefs: [
-            FixtureDef(
-              // The effective width of the rectangular portion is given by (size.x - size.y)
-              // where size.y is (2 * radius) of the end circles.
-              PolygonShape()..setAsBoxXY((size.x - size.y) * 0.5, size.y * 0.5),
-              restitution: 1,
-              friction: 0.25,
-            ),
-            FixtureDef(
-              CircleShape()
-                ..radius = size.y * 0.5
-                ..position.setValues(-size.x * 0.5 + size.y * 0.5, 0),
-              restitution: 1,
-              friction: 0.25,
-            ),
-            FixtureDef(
-              CircleShape()
-                ..radius = size.y * 0.5
-                ..position.setValues(size.x * 0.5 - size.y * 0.5, 0),
-              restitution: 1,
-              friction: 0.25,
-            ),
-          ],
-        );
+          FixtureDef(
+            CircleShape()
+              ..radius = size.y * 0.5
+              ..position.setValues(-size.x * 0.5 + size.y * 0.5, 0),
+            restitution: 1,
+            friction: 0.25,
+          ),
+          FixtureDef(
+            CircleShape()
+              ..radius = size.y * 0.5
+              ..position.setValues(size.x * 0.5 - size.y * 0.5, 0),
+            restitution: 1,
+            friction: 0.25,
+          ),
+        ],
+      );
 
   final Vector2 size;
 

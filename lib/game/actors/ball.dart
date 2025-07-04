@@ -7,21 +7,21 @@ import 'package:flame_forge2d/flame_forge2d.dart';
 class Ball extends BodyComponent
     with ContactCallbacks, ParentIsA<BrickBreakerWorld> {
   Ball({double radius = 0, Vector2? position})
-    : super(
-        bodyDef: BodyDef(
-          type: BodyType.dynamic,
-          position: position,
-          fixedRotation: true,
-          bullet: true,
-        ),
-        fixtureDefs: [
-          FixtureDef(
-            CircleShape()..radius = radius,
-            restitution: 1,
-            friction: 0.25,
+      : super(
+          bodyDef: BodyDef(
+            type: BodyType.dynamic,
+            position: position,
+            fixedRotation: true,
+            bullet: true,
           ),
-        ],
-      ) {
+          fixtureDefs: [
+            FixtureDef(
+              CircleShape()..radius = radius,
+              restitution: 1,
+              friction: 0.25,
+            ),
+          ],
+        ) {
     bodyDef?.userData = this;
   }
 

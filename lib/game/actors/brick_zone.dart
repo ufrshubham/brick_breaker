@@ -28,8 +28,7 @@ class BrickZone extends PositionComponent {
 
     for (var row = 0; row < numBricksY; row++) {
       for (var col = 0; col < numBricksX; col++) {
-        final brickPosition =
-            position +
+        final brickPosition = position +
             Vector2(
               brickSize.x * 0.5 + col * (brickSize.x + spacingX),
               brickSize.y * 0.5 + row * (brickSize.y + spacingY),

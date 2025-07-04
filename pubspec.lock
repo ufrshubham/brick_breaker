@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: async
-      sha256: d2872f9c19731c2e5f10444b14686eb7cc85c76274bd6c16e1816bff9a3bab63
+      sha256: "758e6d74e971c3e5aceb4110bfd6698efc7f501675bcfe0c775459a8140750eb"
       url: "https://pub.dev"
     source: hosted
-    version: "2.12.0"
+    version: "2.13.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -45,26 +45,26 @@ packages:
     dependency: transitive
     description:
       name: fake_async
-      sha256: "6a95e56b2449df2273fd8c45a662d6947ce1ebb7aafe80e550a3f68297f3cacc"
+      sha256: "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.2"
+    version: "1.3.3"
   flame:
     dependency: "direct main"
     description:
       name: flame
-      sha256: "7a39044eeea6906d8acc5d8292941fa081a4f2a37fd76dc5a2dbee8a29e28256"
+      sha256: ec0d2a536b543ff7c611a6fd331c24004590b8d898b4bd2feef7fe29eeeb7eca
       url: "https://pub.dev"
     source: hosted
-    version: "1.27.0"
+    version: "1.30.0"
   flame_forge2d:
     dependency: "direct main"
     description:
       name: flame_forge2d
-      sha256: "4ed66a493146f7ec6bd8458527a6fdd7010e36142db3b66f55e7fce6e9186cb2"
+      sha256: "9a083320c94afdbd8d1212064ebf0d0503fbe61d53960e74864290889b123917"
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.3+1"
+    version: "0.19.0+3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -74,10 +74,10 @@ packages:
     dependency: "direct dev"
     description:
       name: flutter_lints
-      sha256: "5398f14efa795ffb7a33e9b6a08798b26a180edac4ad7db3f231e40f82ce11e1"
+      sha256: "3105dc8492f6183fb076ccf1f351ac3d60564bff92e20bfc4af9cc1651f4e7e1"
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.0"
+    version: "6.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -87,18 +87,18 @@ packages:
     dependency: transitive
     description:
       name: forge2d
-      sha256: "6aac85f1cb9f7e3720bff5d6884ff2e1bcb74402e6fe271599b7b1f65574f5e2"
+      sha256: c7d0f84bb75d16af41ab5168676d6df80f32a9890ccaf76857d90fe80bb6e7ff
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.1"
+    version: "0.14.0"
   leak_tracker:
     dependency: transitive
     description:
       name: leak_tracker
-      sha256: c35baad643ba394b40aac41080300150a4f08fd0fd6a10378f8f7c6bc161acec
+      sha256: "6bb818ecbdffe216e81182c2f0714a2e62b593f4a4f13098713ff1685dfb6ab0"
       url: "https://pub.dev"
     source: hosted
-    version: "10.0.8"
+    version: "10.0.9"
   leak_tracker_flutter_testing:
     dependency: transitive
     description:
@@ -119,10 +119,10 @@ packages:
     dependency: transitive
     description:
       name: lints
-      sha256: c35bb79562d980e9a453fc715854e1ed39e24e7d0297a880ef54e17f9874a9d7
+      sha256: a5e2b223cb7c9c8efdc663ef484fdd95bb243bff242ef5b13e26883547fce9a0
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.1"
+    version: "6.0.0"
   matcher:
     dependency: transitive
     description:
@@ -151,10 +151,10 @@ packages:
     dependency: transitive
     description:
       name: ordered_set
-      sha256: fc861bb51fc863cd3e0718e21768af9586e0d5022b91a0fd4437636456cdb7d0
+      sha256: d6c1d053a533e84931a388cbf03f1ad21a0543bf06c7a281859d3ffacd8e15f2
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.1"
+    version: "8.0.0"
   path:
     dependency: transitive
     description:
@@ -228,10 +228,10 @@ packages:
     dependency: transitive
     description:
       name: vm_service
-      sha256: "0968250880a6c5fe7edc067ed0a13d4bae1577fe2771dcf3010d52c4a9d3ca14"
+      sha256: ddfa8d30d89985b96407efce8acbdd124701f96741f2d981ca860662f1c0dc02
       url: "https://pub.dev"
     source: hosted
-    version: "14.3.1"
+    version: "15.0.0"
 sdks:
-  dart: ">=3.7.0-0 <4.0.0"
+  dart: ">=3.8.0 <4.0.0"
   flutter: ">=3.27.1"
